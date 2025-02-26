@@ -1,18 +1,17 @@
 package com.example.service;
 
-import com.example.projection.EmployeeProjection;
 import com.example.repository.EmployeeRepository;
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@AllArgsConstructor
 @Service
+@RequiredArgsConstructor
 public class EmployeeService {
     private final EmployeeRepository employeeRepository;
 
-    public List<EmployeeProjection> getEmployees(Double salary) {
-        return employeeRepository.findBySalaryGreaterThan(salary);
+    public <T> List<T> getEmployeesBySalary(Double salary, Class<T> type) {
+        return employeeRepository.findBySalaryGreaterThan(salary, type);
     }
 }

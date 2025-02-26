@@ -19,7 +19,4 @@ public class Employee {
     @Column(nullable = false)
     private Double salary;
 
-    @ManyToOne
-    @JoinColumn(name = "dept_id")
-    private Department department;
 }
