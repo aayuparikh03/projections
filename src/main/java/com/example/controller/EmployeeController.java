@@ -1,6 +1,6 @@
 package com.example.controller;
 
-import com.example.dto.EmployeeDTO;
+import com.example.projection.EmployeeProjection;
 import com.example.service.EmployeeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,7 +19,7 @@ public class EmployeeController {
 
 
     @GetMapping
-    public List<EmployeeDTO> getEmployees(@RequestParam("salary") Double salary) {
+    public List<EmployeeProjection> getEmployees(@RequestParam("salary") Double salary) {
         return employeeService.getEmployees(salary);
     }
 }
