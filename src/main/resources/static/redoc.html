@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReDoc - Combined API</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:300,400,700" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/redoc@latest/bundles/redoc.standalone.js"></script>
+</head>
+<body>
+<redoc spec-url="http://localhost:8080/api/merged-api-docs"></redoc>
+<script>
+    Redoc.init("http://localhost:8080/api/merged-api-docs", {}, document.body);
+</script>
+</body>
+</html>
